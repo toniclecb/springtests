@@ -25,7 +25,7 @@ public class PersonControllerTest {
 	private TestRestTemplate restTemplate;
 
 	@Test
-	public void greetingShouldReturnDefaultMessage() throws Exception {
+	public void checkShouldReturnDefaultMessage() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/v1/person/check",
 				String.class)).contains("UP");
 	}
