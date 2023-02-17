@@ -22,6 +22,11 @@ public class PersonController {
 	@Autowired
 	PersonService personService;
 	
+	@GetMapping("/check")
+	public ResponseEntity<String> check() {
+		return ResponseEntity.ok("UP");
+	}
+	
 	@GetMapping("/{id}")
 	public Person getPerson(@PathVariable("id") Long id) {
 		return personService.findById(id);
